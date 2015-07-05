@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.kantega.opensource-parent</groupId>
         <artifactId>opensource-parent</artifactId>
-        <version>1.6</version>
+        <version>1.7-SNAPSHOT</version>
     </parent>
 
     <groupId>org.kantega.openaksess</groupId>
@@ -28,10 +28,17 @@
     </licenses>
 
     <properties>
+        <spring.version>3.2.12.RELEASE</spring.version>
         <tinymce.version>4.1.9</tinymce.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>tinymce</artifactId>
@@ -44,6 +51,7 @@
             <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
 
     <build>

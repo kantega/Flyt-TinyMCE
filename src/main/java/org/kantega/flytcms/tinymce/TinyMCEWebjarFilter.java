@@ -41,7 +41,7 @@ public class TinyMCEWebjarFilter extends OncePerRequestFilter implements Filter 
         }
 
         if(is != null){
-            httpServletResponse.setHeader("Content-Type", "application/javascript");
+            httpServletResponse.setHeader("Content-Type", sc.getMimeType(substring));
             writeToStream(is, httpServletResponse.getOutputStream());
         }
 

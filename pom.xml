@@ -7,10 +7,10 @@
     <parent>
         <groupId>org.kantega.opensource-parent</groupId>
         <artifactId>opensource-parent</artifactId>
-        <version>1.7-SNAPSHOT</version>
+        <version>1.7</version>
     </parent>
 
-    <groupId>org.kantega.openaksess</groupId>
+    <groupId>org.kantega.flytcms</groupId>
     <artifactId>tiny-mce</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -29,7 +29,7 @@
 
     <properties>
         <spring.version>3.2.12.RELEASE</spring.version>
-        <tinymce.version>4.1.9</tinymce.version>
+        <tinymce.version>4.2.1</tinymce.version>
     </properties>
 
     <dependencies>

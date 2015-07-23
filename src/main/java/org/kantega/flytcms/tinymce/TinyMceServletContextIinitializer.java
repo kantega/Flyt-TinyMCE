@@ -13,6 +13,6 @@ public class TinyMceServletContextIinitializer implements ServletContainerInitia
         EnumSet<DispatcherType> dispatcherTypes = EnumSet.allOf(DispatcherType.class);
         dispatcherTypes.remove(DispatcherType.INCLUDE);
         ctx.addFilter("tinymcewebjarfilter", TinyMCEWebjarFilter.class)
-                .addMappingForUrlPatterns(dispatcherTypes, false, "/flytcms/tinymce/*");
+                .addMappingForUrlPatterns(dispatcherTypes, false, "/flytcms/tinymce/*", "/aksess/tinymce/*");
     }
 }

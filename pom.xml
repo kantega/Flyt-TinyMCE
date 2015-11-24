@@ -10,7 +10,7 @@
 
     <groupId>org.kantega.flytcms</groupId>
     <artifactId>tiny-mce</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
 
     <organization>
         <name>Kantega AS</name>
@@ -27,7 +27,7 @@
 
     <scm>
         <connection>scm:git:git@gitlab.kantega.no:flyt-cms/flyt-tinymce.git</connection>
-      <tag>HEAD</tag>
+      <tag>tiny-mce-1.1</tag>
   </scm>
     <properties>
         <spring.version>3.2.12.RELEASE</spring.version>

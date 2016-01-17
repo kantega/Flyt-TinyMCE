@@ -20,12 +20,12 @@ import java.net.URL;
 public class TinyMCEWebjarFilter extends OncePerRequestFilter implements Filter {
 
     private final String PATH_PREFIX = "/flytcms/tinymce/";
-    private String tinymceVersion;
+    private String tinymcePath;
 
     public TinyMCEWebjarFilter() throws ServletException {
         super();
         try {
-            tinymceVersion = readVersion();
+            tinymcePath = readPath();
         } catch (IOException e) {
             throw new ServletException("Could not read Tiny MCE version");
         }
@@ -39,7 +39,7 @@ public class TinyMCEWebjarFilter extends OncePerRequestFilter implements Filter 
 
         String substring = requestURI.substring(requestURI.indexOf(PATH_PREFIX) + PATH_PREFIX.length());
 
-        String tinyPath = "/webjars/tinymce/" + tinymceVersion + "/" + substring;
+        String tinyPath = tinymcePath + "/" + substring;
 
         ServletContext sc = request.getServletContext();
         InputStream is = sc.getResourceAsStream(tinyPath);
@@ -67,8 +67,8 @@ public class TinyMCEWebjarFilter extends OncePerRequestFilter implements Filter 
         }
     }
 
-    private String readVersion() throws IOException {
-        URL resource = getClass().getResource("tinymce.version");
+    private String readPath() throws IOException {
+        URL resource = getClass().getResource("tinymce.path");
         try(InputStream inputStream = resource.openStream()){
             StringBuilder textBuilder = new StringBuilder();
             try (Reader reader = new BufferedReader(new InputStreamReader(inputStream))) {
@@ -77,7 +77,7 @@ public class TinyMCEWebjarFilter extends OncePerRequestFilter implements Filter 
                     textBuilder.append((char) c);
                 }
             }
-            return textBuilder.toString();
+            return textBuilder.toString().replaceAll("\n", "");
         }
     }
 }

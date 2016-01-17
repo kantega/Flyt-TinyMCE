@@ -31,7 +31,8 @@
   </scm>
     <properties>
         <spring.version>3.2.12.RELEASE</spring.version>
-        <tinymce.version>4.2.1</tinymce.version>
+        <tinymce.version>4.3.3</tinymce.version>
+        <tinymce.path>/webjars/tinymce-dist/${tinymce.version}</tinymce.path>
     </properties>
 
     <dependencies>
@@ -42,10 +43,11 @@
         </dependency>
 
         <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>tinymce</artifactId>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>tinymce-dist</artifactId>
             <version>${tinymce.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -63,6 +65,7 @@
                 <directory>src/main/resources</directory>
                 <excludes>
                     <exclude>org/kantega/flytcms/tinymce/tinymce.version</exclude>
+                    <exclude>org/kantega/flytcms/tinymce/tinymce.path</exclude>
                 </excludes>
                 <filtering>false</filtering>
             </resource>
@@ -70,6 +73,7 @@
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>org/kantega/flytcms/tinymce/tinymce.version</include>
+                    <include>org/kantega/flytcms/tinymce/tinymce.path</include>
                 </includes>
                 <filtering>true</filtering>
             </resource>

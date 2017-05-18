@@ -77,7 +77,7 @@ public class TinyMCEWebjarFilter extends OncePerRequestFilter implements Filter 
                     textBuilder.append((char) c);
                 }
             }
-            return textBuilder.toString().replaceAll("\n", "");
+            return textBuilder.toString().replaceAll("\r\n", "");
         }
     }
 }

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.kantega.opensource-parent</groupId>
         <artifactId>opensource-parent</artifactId>
-        <version>1.7</version>
+        <version>1.9-SNAPSHOT</version>
     </parent>
 
     <groupId>org.kantega.flytcms</groupId>
@@ -84,7 +84,7 @@
         <repository>
             <id>nexus</id>
             <name>Kantega Maven Repository</name>
-            <url>http://opensource.kantega.no/nexus/content/groups/public/</url>
+            <url>https://opensource.kantega.no/nexus/content/groups/public/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -92,7 +92,7 @@
         <repository>
             <id>snapshots</id>
             <name>Kantega Snapshots</name>
-            <url>http://opensource.kantega.no/nexus/content/groups/public-snapshots/</url>
+            <url>https://opensource.kantega.no/nexus/content/groups/public-snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>

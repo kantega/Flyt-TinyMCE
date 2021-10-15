@@ -31,7 +31,7 @@
   </scm>
     <properties>
         <spring.version>3.2.12.RELEASE</spring.version>
-        <tinymce.version>4.3.3</tinymce.version>
+        <tinymce.version>4.9.11</tinymce.version>
         <tinymce.path>/webjars/tinymce-dist/${tinymce.version}</tinymce.path>
     </properties>
 

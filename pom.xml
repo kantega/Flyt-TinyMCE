@@ -32,7 +32,7 @@
     <properties>
         <spring.version>3.2.12.RELEASE</spring.version>
         <tinymce.version>4.9.11</tinymce.version>
-        <tinymce.path>/webjars/tinymce-dist/${tinymce.version}</tinymce.path>
+        <tinymce.path>/webjars/tinymce</tinymce.path>
     </properties>
 
     <dependencies>
@@ -43,7 +43,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.webjars.bower</groupId>
+            <groupId>org.webjars.bowergithub.tinymce</groupId>
             <artifactId>tinymce-dist</artifactId>
             <version>${tinymce.version}</version>
         </dependency>
